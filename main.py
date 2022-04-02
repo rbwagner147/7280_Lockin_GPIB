@@ -66,18 +66,18 @@ Sens = []
 Freq = []
 
 
-print(inst.query('DC. 2 ' + str_term))     
-for i in range(0,Npts-1): 
+print(inst.write('DC. 2 ' + str_term))     
+for i in range(0,Npts): 
     print('stb = ', bin(inst.stb)[9])
     Mag.append(float(inst.read()))
 
-print(inst.query('DC. 3 ' + str_term))     
-for i in range(0,Npts-1): 
+print(inst.write('DC. 3 ' + str_term))     
+for i in range(0,Npts): 
     print('stb = ', bin(inst.stb)[9])
     Pha.append(float(inst.read()))
     
-print(inst.query('DC. 15 ' + str_term))    
-for i in range(0,Npts-1): 
+print(inst.write('DC. 15 ' + str_term))    
+for i in range(0,Npts): 
     print('stb = ', bin(inst.stb)[9])
     Freq.append(float(inst.read()))
 
